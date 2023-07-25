@@ -7,6 +7,3 @@ torch
 demoji
 streamlit-tags
 networkx
-re
-matplotlib
-plotly
