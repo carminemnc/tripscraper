@@ -1,7 +1,6 @@
 selenium
 nltk
 lexmo
-collections
 datetime
 transformers[sentencepiece]
 torch
