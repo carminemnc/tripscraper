@@ -20,7 +20,9 @@ from nltk.stem.wordnet import WordNetLemmatizer
 ''' settings '''
 
 # Load Aspect-Based Sentiment Analysis model
-  
+
+nltk.download('stopwords')
+
 absa_tokenizer = AutoTokenizer.from_pretrained(
     "yangheng/deberta-v3-base-absa-v1.1")
 absa_model = AutoModelForSequenceClassification \
