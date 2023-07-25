@@ -1,13 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-import pandas as pd
+import pandas as pd,time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-import chromedriver_autoinstaller
-
-chromedriver_autoinstaller.install()
+from webdriver_manager.chrome import ChromeDriverManager
+import streamlit as st
 
 
 def hotelTripScraper(url,pages):
@@ -17,9 +15,19 @@ def hotelTripScraper(url,pages):
     
     # ChromeDriver Options
     
+    
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+
+    @st.experimental_singleton
+    def get_driver():
+        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chromeOptions)
+    
     chromeOptions = Options()
     chromeOptions.add_argument("--headless")
-    brwsr = webdriver.Chrome(options=chromeOptions) # Chrome webdriver
+    brwsr = get_driver()
     
     # get URL
     brwsr.get(url)

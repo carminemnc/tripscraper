@@ -9,4 +9,4 @@ streamlit-tags
 networkx
 matplotlib
 plotly
-chromedriver-autoinstaller
+webdriver-manager
