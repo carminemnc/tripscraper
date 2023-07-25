@@ -1,11 +1,13 @@
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-import pandas as pd,time
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.firefox import GeckoDriverManager
 import streamlit as st
+import pandas as pd,time
 
 
 def hotelTripScraper(url,pages):
@@ -15,9 +17,13 @@ def hotelTripScraper(url,pages):
     
     # ChromeDriver Options
     
-    chromeOptions = Options()
-    chromeOptions.add_argument("--headless")
-    brwsr = webdriver.Chrome(options=chromeOptions,executable_path='./chromedriver.exe') # Chrome webdriver
+    firefoxOptions = Options()
+    firefoxOptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
+    brwsr = webdriver.Firefox(
+        options=firefoxOptions,
+        service=service,
+    )
     
     # get URL
     brwsr.get(url)
