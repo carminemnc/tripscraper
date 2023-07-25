@@ -1,0 +1,13 @@
+selenium
+nltk
+lexmo
+collections
+datetime
+transformers[sentencepiece]
+torch
+demoji
+streamlit-tags
+networkx
+re
+matplotlib
+plotly

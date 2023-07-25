@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+[data-testid="stForm"] {border: 0px}
+/*#MainMenu {visibility: hidden;}*/
+/*footer {visibility: hidden;}*/
+html, body, [class*="css"]  {
+font-family: 'Montserrat', sans-serif;
+}
+.header-font {
+ font-size:22px !important;
+ font-weight:bold;
+}
+h1 {
+    font-size:34px !important;
+    font-weight:bold;
+    color:#008b8b;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    font-size:12px !important;
+    font-weight:bold;
+    color:#008b8b;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+.text {
+    font-size:100px;
+    font-weight:bold;
+    color:#008b8b;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+}
+.containerIcons {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
