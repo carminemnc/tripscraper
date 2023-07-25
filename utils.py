@@ -1,7 +1,4 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-import pandas as pd,numpy as np,time,demoji
+import pandas as pd,numpy as np,demoji
 from datetime import datetime
 from collections import Counter
 import re

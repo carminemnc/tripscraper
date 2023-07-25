@@ -1,18 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-import pandas as pd,numpy as np,time,demoji
-from datetime import datetime
-from collections import Counter
+import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-# import re
-# import nltk
-# from nltk.corpus import stopwords
-# from nltk.tokenize import word_tokenize
-# from nltk.util import bigrams,trigrams
-# from LeXmo import LeXmo
-from utils import *
+
+import chromedriver_autoinstaller
+
+chromedriver_autoinstaller.install()
+
+
 def hotelTripScraper(url,pages):
     
     # empty dataframe
