@@ -13,21 +13,26 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch.nn.functional as F
 from transformers import pipeline
 from nltk.stem.wordnet import WordNetLemmatizer
+import streamlit as st
 
 ''' settings '''
+# Load models
 
-# Load Aspect-Based Sentiment Analysis model
+@st.cache
+def load_models():
+    absa_tokenizer = AutoTokenizer.from_pretrained(
+        "yangheng/deberta-v3-base-absa-v1.1")
+    absa_model = AutoModelForSequenceClassification \
+        .from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+        
+    zsc = pipeline(model="facebook/bart-large-mnli")
+    return absa_tokenizer,absa_model,zsc
+
 
 nltk.download('stopwords')
-
-absa_tokenizer = AutoTokenizer.from_pretrained(
-    "yangheng/deberta-v3-base-absa-v1.1")
-absa_model = AutoModelForSequenceClassification \
-    .from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
-    
-zsc = pipeline(model="facebook/bart-large-mnli")
-
 stop_words = stopwords.words('english')
+
+absa_tokenizer,absa_model,zsc = load_models()
 
 ''' aspect-based sentiment analysis function '''
 
