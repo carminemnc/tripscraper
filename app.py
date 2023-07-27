@@ -4,11 +4,19 @@ from charter import *
 from scraper import *
 import pandas as pd
 from streamlit_tags import *
+import os
 
 # Settings
 
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+
+@st.cache_resource
+def installff():
+  os.system('sbase install geckodriver')
+  os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/drivers/geckodriver /home/appuser/venv/bin/geckodriver')
+
+_ = installff()
 
 # Title
 

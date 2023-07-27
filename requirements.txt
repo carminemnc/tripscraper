@@ -1,4 +1,4 @@
-seleniumbase
+selenium
 nltk
 lexmo
 datetime
@@ -9,5 +9,3 @@ streamlit-tags
 networkx
 matplotlib
 plotly
-webdriver-manager
-streamlit
