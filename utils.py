@@ -17,41 +17,6 @@ import streamlit as st
 
 ''' settings '''
 
-# Load models & vocabulary
-
-@st.cache_resource
-def load_absa_tokenizer():
-    absa_tokenizer = AutoTokenizer.from_pretrained(
-        "yangheng/deberta-v3-base-absa-v1.1")
-    return absa_tokenizer
-
-@st.cache_resource
-def load_absa_model():
-    absa_model = AutoModelForSequenceClassification \
-        .from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
-    return absa_model
-
-@st.cache_resource
-def load_zsc():
-    zsc = pipeline(model="facebook/bart-large-mnli")
-    return zsc
-
-@st.cache_resource
-def nltk_dwnld_stopwords():
-    
-    return nltk.download('stopwords')
-
-absa_tokenizer = load_absa_tokenizer()
-absa_model = load_absa_model()
-zsc = load_zsc()
-
-nltk_dwnld_stopwords()
-stop_words = stopwords.words('english')
-
-
-
-''' aspect-based sentiment analysis function '''
-
 def absa_predictor(sentence, word):
 
     sentence = sentence

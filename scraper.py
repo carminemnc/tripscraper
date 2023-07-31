@@ -3,6 +3,8 @@ import pandas as pd,time
 from selenium import webdriver
 from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.common.by import By
+import os
+
 
 def hotelTripScraper(url,pages):
     
