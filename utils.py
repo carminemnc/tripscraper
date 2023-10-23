@@ -1,3 +1,5 @@
+
+
 import pandas as pd,numpy as np,demoji
 from datetime import datetime
 from collections import Counter
@@ -15,7 +17,15 @@ from transformers import pipeline
 from nltk.stem.wordnet import WordNetLemmatizer
 import streamlit as st
 
-''' settings '''
+''' settings and models '''
+absa_tokenizer = AutoTokenizer.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+absa_model = AutoModelForSequenceClassification.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+zsc = pipeline(model="facebook/bart-large-mnli")
+nltk.download('stopwords')
+stop_words = stopwords.words('english')
+
+
+''' absa sentiment analysis'''
 
 def absa_predictor(sentence, word):
 
@@ -46,7 +56,6 @@ def absa_analyzer(sentence, word):
     
     return df
 
-
 ''' zero-shot classification'''
 
 def zero_shot_predictor(data,labels):
@@ -66,9 +75,10 @@ def zero_shot_analyzer(data,labels):
     
     return df
 
+
 ''' df cleaner '''
 
-def dfCleaner(data):
+def dataframe_cleaner(data):
     
     lemmatizer = WordNetLemmatizer()
     
@@ -151,7 +161,6 @@ def dfCleaner(data):
         return out
     
     ''' review title '''
-    
     data['review_title'] = data['review_title'].apply(demoji.replace)
     data['review_title'] = data['review_title'].apply(lambda x: clean_text(x))
     data['review_title_length'] = data['review_title'].apply(word_tokenize).apply(lambda x : len(x))

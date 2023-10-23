@@ -12,3 +12,11 @@ The Playground section of TripScraper is a sandbox where users can experiment wi
 This application is not designed for business purposes but only as a NLP playground.
 
 ![Screenshot](tripscraper.gif)
+
+# How it works
+
+Download this repository and:
+
+```
+streamlit run app.py
+```
