@@ -3,6 +3,8 @@
 
 Powered by Streamlit.
 
+Ancora uno
+
 TripScraper is an open-source Natural Language Processing (NLP) tool that can be used to scrape TripAdvisor reviews and analyze them by ratings, words, and other criteria.
              
 It uses a variety of NLP techniques, including sentiment analysis, word frequency analysis, word trends over time and aspect based sentiment analysis.
