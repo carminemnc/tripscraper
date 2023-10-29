@@ -1,9 +1,11 @@
 
-# TripScraper
+# Tripscraper
 
-Powered by Streamlit.
+![Screenshot](tripscraper.gif)
 
-TripScraper is an open-source Natural Language Processing (NLP) tool that can be used to scrape TripAdvisor reviews and analyze them by ratings, words, and other criteria.
+Powered by [Streamlit](https://streamlit.io/).
+
+Tripscraper is an open-source Natural Language Processing (NLP) tool that can be used to scrape TripAdvisor reviews and analyze them by ratings, words, and other criteria.
              
 It uses a variety of NLP techniques, including sentiment analysis, word frequency analysis, word trends over time and aspect based sentiment analysis.
 
@@ -11,11 +13,11 @@ The Playground section of TripScraper is a sandbox where users can experiment wi
 
 This application is not designed for business purposes but only as a NLP playground.
 
-![Screenshot](tripscraper.gif)
-
 # How it works
 
-Download this repository and:
+All the packages used in the application are listed on `requirements.txt`
+
+Clone or download this repository and from the application directory:
 
 ```
 streamlit run app.py

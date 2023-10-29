@@ -1,4 +1,3 @@
-import streamlit as st
 import pandas as pd,time
 from selenium import webdriver
 from selenium.webdriver import FirefoxOptions,ChromeOptions
@@ -30,7 +29,7 @@ def reviews_scraper(url,pages):
         # add 'or + page_counter'
         page_counter +=10
         
-        print(url)
+        # print(url)
         
         # get URL
         brwsr.get(url)
@@ -69,5 +68,7 @@ def reviews_scraper(url,pages):
             
             df.loc[len(df)] = review_objects
             
+        # print # of reviews scraped
+        print(f'dataframe length: {len(df)}')
     
     return df

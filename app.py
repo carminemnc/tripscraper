@@ -22,7 +22,7 @@ st.markdown("""
                 <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.webp" type="image/webp">
                 <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.gif" alt="🌍" width="100" height="100">
                     <div class="text">
-                        <h1>TripScraper</h1>
+                        <h1>Tripscraper</h1>
                     </div>
             </div>
             """, unsafe_allow_html=True)
@@ -48,11 +48,11 @@ with tab_about:
     
     st.write("""
              
-             :green[TripScraper] is an open-source Natural Language Processing (NLP) tool that can be used to scrape TripAdvisor reviews and analyze them by ratings, words, and other criteria. 
+             :green[Tripscraper] is an open-source Natural Language Processing (NLP) tool that can be used to scrape TripAdvisor reviews and analyze them by ratings, words, and other criteria. 
              
              It uses a variety of NLP techniques, including sentiment analysis, word frequency analysis, word trends over time and aspect based sentiment analysis.
              
-             The Playground section of :green[TripScraper] is a sandbox where users can experiment with the NLP models that are used by the tool. This section allows users to try out different features of the models, to see how they work, and to learn more about how NLP can be used to analyze TripAdvisor reviews.
+             The Playground section of :green[Tripscraper] is a sandbox where users can experiment with the NLP models that are used by the tool. This section allows users to try out different features of the models, to see how they work, and to learn more about how NLP can be used to analyze TripAdvisor reviews.
              
              :orange[This application is not designed for business purposes but only as a NLP playground.]
              
@@ -66,7 +66,7 @@ with tab_app:
     with st.form('main'):
         
         st.write("""
-                 :green[TripScraper] can only scrape up to second-last page of TripAdvisor :green[Hotel] link. 
+                 :green[Tripscraper] can only scrape up to second-last page of TripAdvisor :green[Hotel] link. 
                  
                  If the page that you're trying to gather has $n$ pages select $n-1$ pages to scrape.
                  
