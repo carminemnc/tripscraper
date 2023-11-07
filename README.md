@@ -15,6 +15,8 @@ This application is not designed for business purposes but only as a NLP playgro
 
 # How it works
 
+Require `Python <= 3.11`
+
 All the packages used in the application are listed on `requirements.txt`.
 
 Clone or download this repository and from the application directory:

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 [data-testid="stForm"] {border: 0px}
+
+
 /*#MainMenu {visibility: hidden;}*/
 /*footer {visibility: hidden;}*/
 html, body, [class*="css"]  {

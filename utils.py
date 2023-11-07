@@ -9,16 +9,15 @@ from nltk.util import bigrams,trigrams
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from LeXmo import LeXmo
 
-# from transformers import AutoTokenizer, AutoModelForSequenceClassification
-# import torch.nn.functional as F
-# from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch.nn.functional as F
+from transformers import pipeline
 from nltk.stem.wordnet import WordNetLemmatizer
-# import streamlit as st
 
 ''' settings and models '''
-# absa_tokenizer = AutoTokenizer.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
-# absa_model = AutoModelForSequenceClassification.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
-# zsc = pipeline(model="facebook/bart-large-mnli")
+absa_tokenizer = AutoTokenizer.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+absa_model = AutoModelForSequenceClassification.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+zsc = pipeline(model="facebook/bart-large-mnli")
 nltk.download('stopwords')
 stop_words = stopwords.words('english')
 
