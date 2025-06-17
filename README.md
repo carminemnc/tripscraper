@@ -1,7 +1,7 @@
 
 # Tripscraper
 
-![Screenshot](tripscraper.gif)
+![Screenshot](./imgs/tripscraper.gif)
 
 Powered by [Streamlit](https://streamlit.io/).
 
@@ -17,12 +17,38 @@ This application is not designed for business purposes but only as a NLP playgro
 
 # How it works
 
-Require `Python <= 3.11`
+1. Clone the repository
+```
+git clone https://github.com/carminemnc/tripscraper
+```
 
-All the packages used in the application are listed on `requirements.txt`.
+2. Create virtual environment (first time) inside the repository
+```
+py -m venv venv
+```
 
-Clone or download this repository and from the application directory:
+3. Activate virtual environment
+```
+venv\Scripts\activate
+```
+
+4. Install packages
 
 ```
+py -m pip install -r requirements.txt
+```
+
+5. Run the app
+```
 streamlit run app.py
+```
+
+6. Quit the app
+```
+Ctrl + c
+```
+
+7. Deactivate virtual environment
+```
+deactivate
 ```

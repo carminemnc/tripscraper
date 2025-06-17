@@ -5,9 +5,12 @@ import os
 from charter import *
 from utils import *
 from scraper import *
-
+import base64
 
 # settings
+def img_to_base64(img_path):
+    with open(img_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
 
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
@@ -33,14 +36,18 @@ st.write('#')
 
 tab_about, tab_app, tab_play = st.tabs([':earth_africa: About',':microscope: Application',':basketball: Playground'])
 
-st.markdown("""
+github_img = img_to_base64("./imgs/github-tripscraper.png")
+linkedin_img = img_to_base64("./imgs/linkedin-tripscraper.png")
+
+st.markdown(f"""
             <br>
             <br>
             <div class="containerIcons">
-                <a href="https://github.com/carminemnc"><img src="https://raw.githubusercontent.com/carminemnc/imgs/main/github-tripscraper.png" title="Follow me on Github!" width="30" height="30"></a>
-                <a href="https://www.linkedin.com/in/carmine-minichini"><img src="https://raw.githubusercontent.com/carminemnc/imgs/main/linkedin-tripscraper.png" alt="Follow me on linkedin" width="30" height="30"></a>
+                <a href="https://github.com/carminemnc"><img src="data:image/png;base64,{github_img}" title="Follow me on Github!" width="30" height="30"></a>
+                <a href="https://www.linkedin.com/in/carmine-minichini"><img src="data:image/png;base64,{linkedin_img}" alt="Follow me on linkedin" width="30" height="30"></a>
             </div>
-            """,unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+
 
 # about
 
