@@ -37,7 +37,7 @@ def reviews_scraper(url,pages):
         time.sleep(2)
         
         # handling cookies
-        #brwsr.find_element(By.XPATH,'//*[@id="onetrust-accept-btn-handler"]').click()
+        brwsr.find_element(By.XPATH,'//*[@id="onetrust-accept-btn-handler"]').click()
         
         # review tabs
         rev_tabs = brwsr.find_element(By.XPATH,".//div[contains(@data-test-target, 'reviews-tab')]")
